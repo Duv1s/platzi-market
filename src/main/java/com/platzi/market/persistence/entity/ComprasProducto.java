@@ -16,6 +16,7 @@ public class ComprasProducto {
     private Boolean estado;
 
     @ManyToOne
+    @MapsId("idCompra")
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private Compra compra;
 
@@ -93,5 +94,41 @@ public class ComprasProducto {
      */
     public void setEstado(Boolean estado) {
         this.estado = estado;
+    }
+
+    /**
+     * Metodo encargado de retornar el valor del atributo compra
+     *
+     * @return El compra asociado a la clase
+     */
+    public Compra getCompra() {
+        return compra;
+    }
+
+    /**
+     * Metodo encargado de modificar el valor del atributo compra
+     *
+     * @param compra El nuevo compra a modificar.
+     */
+    public void setCompra(Compra compra) {
+        this.compra = compra;
+    }
+
+    /**
+     * Metodo encargado de retornar el valor del atributo producto
+     *
+     * @return El producto asociado a la clase
+     */
+    public Producto getProducto() {
+        return producto;
+    }
+
+    /**
+     * Metodo encargado de modificar el valor del atributo producto
+     *
+     * @param producto El nuevo producto a modificar.
+     */
+    public void setProducto(Producto producto) {
+        this.producto = producto;
     }
 }

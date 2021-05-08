@@ -30,7 +30,7 @@ public class Compra {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "producto")
+    @OneToMany(mappedBy = "producto", cascade = {CascadeType.ALL})
     private List<ComprasProducto> productos;
 
     /**
@@ -139,5 +139,41 @@ public class Compra {
      */
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    /**
+     * Metodo encargado de retornar el valor del atributo cliente
+     *
+     * @return El cliente asociado a la clase
+     */
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    /**
+     * Metodo encargado de modificar el valor del atributo cliente
+     *
+     * @param cliente El nuevo cliente a modificar.
+     */
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    /**
+     * Metodo encargado de retornar el valor del atributo productos
+     *
+     * @return El productos asociado a la clase
+     */
+    public List<ComprasProducto> getProductos() {
+        return productos;
+    }
+
+    /**
+     * Metodo encargado de modificar el valor del atributo productos
+     *
+     * @param productos El nuevo productos a modificar.
+     */
+    public void setProductos(List<ComprasProducto> productos) {
+        this.productos = productos;
     }
 }

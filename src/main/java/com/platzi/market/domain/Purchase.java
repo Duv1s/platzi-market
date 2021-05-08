@@ -17,7 +17,7 @@ public class Purchase {
 
     private String state;
 
-    private List<PurchaseItem> item;
+    private List<PurchaseItem> items;
 
     /**
      * Metodo encargado de retornar el valor del atributo purchaseId
@@ -128,20 +128,20 @@ public class Purchase {
     }
 
     /**
-     * Metodo encargado de retornar el valor del atributo item
+     * Metodo encargado de retornar el valor del atributo items
      *
-     * @return El item asociado a la clase
+     * @return El items asociado a la clase
      */
-    public List<PurchaseItem> getItem() {
-        return item;
+    public List<PurchaseItem> getItems() {
+        return items;
     }
 
     /**
-     * Metodo encargado de modificar el valor del atributo item
+     * Metodo encargado de modificar el valor del atributo items
      *
-     * @param item El nuevo item a modificar.
+     * @param items El nuevo items a modificar.
      */
-    public void setItem(List<PurchaseItem> item) {
-        this.item = item;
+    public void setItems(List<PurchaseItem> items) {
+        this.items = items;
     }
 }

@@ -131,4 +131,22 @@ public class Cliente {
     public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
     }
+
+    /**
+     * Metodo encargado de retornar el valor del atributo compras
+     *
+     * @return El compras asociado a la clase
+     */
+    public List<Compra> getCompras() {
+        return compras;
+    }
+
+    /**
+     * Metodo encargado de modificar el valor del atributo compras
+     *
+     * @param compras El nuevo compras a modificar.
+     */
+    public void setCompras(List<Compra> compras) {
+        this.compras = compras;
+    }
 }
